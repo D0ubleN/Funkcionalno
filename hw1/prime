@@ -1,0 +1,10 @@
+#lang racket
+(define (prime? n)
+  (define (helper i)
+    (cond
+      [(<= n 1) #f]
+      [(=(remainder n i) 0) #f]
+      [(> i (/ n 2)) #t]
+      [else (helper (+ i 1))]))
+  (helper 2)
+  )
