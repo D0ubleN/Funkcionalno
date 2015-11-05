@@ -1,0 +1,5 @@
+#lang racket
+(define (area? a b c)
+  (if (and (> (+ a b) c) (> (+ a c) b)(> (+ b c) a))
+      (sqrt(*(/(+ a b c) 2)(-(/(+ a b c) 2) a)(-(/(+ a b c) 2) b)(-(/(+ a b c) 2) c)))
+      #f))
