@@ -1,0 +1,6 @@
+listToNumber :: [Int] -> Int 
+listToNumber = listToNumber' 0
+ where 
+  listToNumber':: Int -> [Int] -> Int
+  listToNumber' res [] = res
+  listToNumber' res (x:xs)  = listToNumber'  (res*10 + x) xs
